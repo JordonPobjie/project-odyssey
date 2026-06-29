@@ -9,6 +9,7 @@ show_help() {
   echo
   echo "Usage:"
   echo "  odyssey backup project"
+  echo "  odyssey doctor"
   echo "  odyssey help"
 }
 
@@ -25,6 +26,9 @@ case "${1:-help}" in
         exit 1
         ;;
     esac
+    ;;
+  doctor)
+    "$PROJECT_DIR/lib/maintenance/doctor.sh"
     ;;
   help|--help|-h)
     show_help
