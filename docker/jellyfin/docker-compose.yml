@@ -1,0 +1,17 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    ports:
+      - "8096:8096"
+    volumes:
+      - /home/jordon/docker/jellyfin/config:/config
+      - /home/jordon/docker/jellyfin/cache:/cache
+      - /home/jordon/media:/media
+    restart: unless-stopped
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
