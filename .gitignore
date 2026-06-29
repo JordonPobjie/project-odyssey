@@ -33,3 +33,26 @@ Thumbs.db
 # ==========================
 backups/
 *.bak
+# Backups
+backups/
+*.tar.gz
+*.sha256
+
+# Runtime app data
+docker/**/config/
+docker/**/cache/
+docker/**/data/
+docker/**/letsencrypt/
+docker/**/logs/
+
+# Environment/secrets
+.env
+*.env
+!*.env.example
+stack.env
+!stack.env.example
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
