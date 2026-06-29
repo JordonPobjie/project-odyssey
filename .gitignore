@@ -1,7 +1,6 @@
+# ==========================
 # Secrets
-.env
-*.env
-stack.env
+# ==========================
 .env
 .env.*
 **/.env
@@ -9,19 +8,22 @@ stack.env
 !.env.example
 !**/.env.example
 
-# Backups
-backups/
-*.bak
-
-# Docker runtime data
+# ==========================
+# Runtime application data
+# ==========================
+docker/*/data/
 docker/*/config/
 docker/*/cache/
-docker/*/data/
-docker/*/letsencrypt/
-docker/*/Postgres/
+docker/*/logs/
+docker/*/library/
 docker/*/Library/
+docker/*/letsencrypt/
+docker/*/postgres/
+docker/*/Postgres/
 
-# OS/editor files
+# ==========================
+# Operating system
+# ==========================
 .vscode/
 .DS_Store
 Thumbs.db
