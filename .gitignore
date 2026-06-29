@@ -1,0 +1,21 @@
+# Secrets
+.env
+*.env
+stack.env
+
+# Backups
+backups/
+*.bak
+
+# Docker runtime data
+docker/*/config/
+docker/*/cache/
+docker/*/data/
+docker/*/letsencrypt/
+docker/*/Postgres/
+docker/*/Library/
+
+# OS/editor files
+.vscode/
+.DS_Store
+Thumbs.db
