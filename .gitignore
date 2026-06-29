@@ -27,3 +27,8 @@ docker/*/Postgres/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# ==========================
+# Generated backups
+# ==========================
+backups/

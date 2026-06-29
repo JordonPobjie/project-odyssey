@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -euo pipefail
+
+PROJECT_DIR="$HOME/project-odyssey"
+
+show_help() {
+  echo "Project Odyssey CLI"
+  echo
+  echo "Usage:"
+  echo "  odyssey backup project"
+  echo "  odyssey help"
+}
+
+case "${1:-help}" in
+  backup)
+    case "${2:-}" in
+      project)
+        "$PROJECT_DIR/lib/backup/project.sh"
+        ;;
+      *)
+        echo "Unknown backup target: ${2:-}"
+        echo
+        show_help
+        exit 1
+        ;;
+    esac
+    ;;
+  help|--help|-h)
+    show_help
+    ;;
+  *)
+    echo "Unknown command: ${1:-}"
+    echo
+    show_help
+    exit 1
+    ;;
+esac
