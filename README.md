@@ -1,53 +1,51 @@
-# Project Homelab
+# 🚀 Project Odyssey
 
-## Overview
+> **A self-hosted homelab for learning Linux, Docker, networking, automation, cloud, and DevOps.**
 
-Project Homelab is my personal infrastructure project, built to learn and practise Linux system administration, Docker, networking, monitoring, documentation, automation and DevOps principles.
+Project Odyssey is my personal infrastructure lab where I design, build, document, and maintain self-hosted services while learning modern infrastructure and cloud technologies.
 
-The goal is not simply to run a media server, but to build and maintain a professional-quality infrastructure environment while understanding **how** each component works.
+What started as a simple media server has evolved into a long-term project focused on developing practical systems administration and DevOps skills through real-world experience.
 
 ---
 
-## Objectives
+# 🎯 Objectives
 
 * Learn Linux administration
-* Learn Docker and Docker Compose
+* Build production-style Docker environments
 * Understand networking and DNS
-* Learn Git and Infrastructure as Code
-* Build reliable backup and disaster recovery procedures
-* Gain practical experience with technologies used in industry
+* Implement reverse proxies and SSL
+* Create automated backups and disaster recovery
+* Learn monitoring and observability
+* Practice Infrastructure as Code
+* Explore AWS and Azure
+* Document everything for repeatability
 
 ---
 
-## Current Infrastructure
+# 🖥️ Current Infrastructure
 
-### Operating System
-
-* Debian 12 (Bookworm)
-
-### Docker Services
-
-* Jellyfin – Media server
-* Immich – Photo management and backup
-* Pi-hole – DNS and ad blocking
-* Uptime Kuma – Service monitoring
-* Portainer – Docker management
-* Nginx Proxy Manager – Reverse proxy
-
-### Networking
-
-* Shared Docker bridge network (`homelab`)
-* Container-to-container communication by container name
+| Service             | Purpose                 | Status |
+| ------------------- | ----------------------- | :----: |
+| Ubuntu Server       | Host operating system   |    ✅   |
+| Docker              | Container platform      |    ✅   |
+| Docker Compose      | Service orchestration   |    ✅   |
+| Portainer           | Docker management       |    ✅   |
+| Pi-hole             | Local DNS & ad blocking |    ✅   |
+| Nginx Proxy Manager | Reverse proxy           |    ✅   |
+| Uptime Kuma         | Monitoring              |    ✅   |
+| Jellyfin            | Media server            |    ✅   |
+| Immich              | Photo management        |    ✅   |
 
 ---
 
-## Repository Structure
+# 📁 Repository Structure
 
 ```text
-Project-Homelab/
+project-odyssey/
+│
 ├── docker/
-│   ├── jellyfin/
 │   ├── immich/
+│   ├── jellyfin/
 │   ├── nginx-proxy-manager/
 │   ├── pihole/
 │   ├── portainer/
@@ -61,89 +59,149 @@ Project-Homelab/
 │   └── operations/
 │
 ├── scripts/
-├── backups/
+│
+├── .env.example
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-## Design Principles
+# 📚 Documentation
 
-Project Homelab follows a few simple principles:
+## Architecture
 
-* Containers should be disposable.
-* Data should be persistent.
-* Everything important should be documented.
-* Infrastructure should be reproducible.
-* Every significant change should be version controlled.
-* Back up anything that cannot easily be recreated.
+* Service inventory
+* Network design
+* Docker networking
+* Storage layout
 
----
+## Operations
 
-## Learning Philosophy
-
-This project is intentionally built slowly.
-
-Rather than only installing software, each new component is studied to understand:
-
-1. What problem does it solve?
-2. How does it work?
-3. Why was this design chosen?
-4. How would it be recovered after a failure?
-
-The aim is to build practical engineering skills rather than simply following tutorials.
-
----
-
-## Roadmap
-
-### Phase 1 – Foundations ✅
-
-* Debian
-* SSH
-* Docker
-* Docker Compose
-* Jellyfin
-* Immich
-* Pi-hole
-* Portainer
-* Uptime Kuma
-* Nginx Proxy Manager
-* Shared Docker networking
-
-### Phase 2 – Professionalise Infrastructure 🚧
-
-* Documentation
-* Git
-* Secrets management
-* Disaster recovery
-* Standardised project structure
-
-### Phase 3 – Monitoring
-
-* Prometheus
-* Grafana
-* Node Exporter
-
-### Phase 4 – Automation
-
-* Automated backups
-* Health monitoring
+* Installation guides
 * Update procedures
+* Backup procedures
+* Restore procedures
 
-### Phase 5 – Cloud & DevOps
+## Learning Notes
 
-* GitHub
-* GitHub Actions
-* CI/CD
-* AWS / Azure integration
+Every major lesson learned while building the homelab is documented.
+
+Examples include:
+
+* Docker networking
+* Reverse proxies
+* Linux commands
+* DNS troubleshooting
+* Container management
 
 ---
 
-## Status
+# 🔐 Security
 
-Project currently under active development.
+Project Odyssey follows a few important principles:
 
-```
-```
+* Secrets stored in `.env`
+* `.env` excluded from Git
+* `.env.example` provided
+* Runtime application data excluded from Git
+* Documentation kept separate from configuration
+
+---
+
+# 💾 Backup Strategy
+
+Planned backup coverage includes:
+
+* Docker Compose files
+* Configuration files
+* Application data
+* Databases
+* Documentation
+
+Automated backup scripts will be added as the project grows.
+
+---
+
+# 📈 Roadmap
+
+## Phase 1 – Core Homelab
+
+* [x] Ubuntu Server
+* [x] Docker
+* [x] Docker Compose
+* [x] Portainer
+* [x] Pi-hole
+* [x] Nginx Proxy Manager
+* [x] Uptime Kuma
+* [x] Jellyfin
+* [x] Immich
+
+---
+
+## Phase 2 – Automation
+
+* [ ] Automated backups
+* [ ] Restore scripts
+* [ ] Container update scripts
+* [ ] Homepage dashboard
+* [ ] Watchtower
+
+---
+
+## Phase 3 – Monitoring
+
+* [ ] Prometheus
+* [ ] Grafana
+* [ ] Log aggregation
+* [ ] Metrics dashboards
+
+---
+
+## Phase 4 – Infrastructure as Code
+
+* [ ] Terraform
+* [ ] Ansible
+* [ ] GitHub Actions
+* [ ] CI/CD pipelines
+
+---
+
+## Phase 5 – Cloud
+
+* [ ] AWS
+* [ ] Azure
+* [ ] Hybrid networking
+* [ ] VPN integration
+
+---
+
+## Phase 6 – Kubernetes
+
+* [ ] k3s
+* [ ] High Availability
+* [ ] Multi-node cluster
+
+---
+
+# 🎓 Skills Being Developed
+
+* Linux
+* Docker
+* Networking
+* DNS
+* Reverse Proxy
+* Bash
+* Git
+* GitHub
+* Infrastructure Documentation
+* Automation
+* Monitoring
+* DevOps
+* Cloud Computing
+
+---
+
+# 📜 License
+
+This repository is intended as a personal learning project and portfolio demonstrating practical infrastructure and DevOps skills.
