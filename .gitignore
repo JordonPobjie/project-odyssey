@@ -2,6 +2,12 @@
 .env
 *.env
 stack.env
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
 
 # Backups
 backups/
